@@ -1,22 +1,35 @@
 import { AssRequest, AssResponse, ErrWrap } from './definitions';
+require('dotenv').config();
 
-let doSetup = null;
-try {
-	// Check if config.json exists
-	require('../config.json');
-} catch (err) {
-	doSetup = require('./setup').doSetup;
-}
+// let doSetup = null;
+// try {
+// 	// Check if config.json exists
+// 	require('../config.json');
+// } catch (err) {
+// 	doSetup = require('./setup').doSetup;
+// }
 
-// Run first time setup if using Docker (pseudo-process, setup will be run with docker exec)
-if (doSetup) {
-	doSetup();
-	// @ts-ignore
-	return;
-}
+// // Run first time setup if using Docker (pseudo-process, setup will be run with docker exec)
+// if (doSetup) {
+// 	doSetup();
+// 	// @ts-ignore
+// 	return;
+// }
 
 // Load the config
-const { host, port, useSsl, isProxied, s3enabled, frontendName, indexFile, useSia } = require('../config.json');
+//const { host, port, useSsl, isProxied, s3enabled, frontendName, indexFile, useSia } = require('../config.json');
+
+const host = process.env.host
+const port = process.env.port
+const useSsl = process.env.useSsl
+const isProxied = process.env.isProxied
+const s3enabled = process.env.s3enabled
+const frontendName = process.env.frontendName
+const { indexFile } = require('../config.json')
+const useSia = process.env.useSia
+
+
+
 
 //#region Imports
 import fs from 'fs-extra';
