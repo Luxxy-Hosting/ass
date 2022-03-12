@@ -19,14 +19,10 @@ require('dotenv').config();
 // Load the config
 //const { host, port, useSsl, isProxied, s3enabled, frontendName, indexFile, useSia } = require('../config.json');
 
-const host = process.env.host
+const host = "0.0.0.0"
 const port = process.env.port
-const useSsl = process.env.useSsl
-const isProxied = process.env.isProxied
-const s3enabled = process.env.s3enabled
 const frontendName = process.env.frontendName
-const { indexFile } = require('../config.json')
-const useSia = process.env.useSia
+const { indexFile, s3enabled, isProxied, useSsl, useSia } = require('../config.json')
 
 
 

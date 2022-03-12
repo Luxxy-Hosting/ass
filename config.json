@@ -1,3 +1,26 @@
 {
-    "indexFile": "index.js"
+    "domain": "",
+    "maxUploadSize": 900,
+    "isProxied": false,
+    "useSsl": false,
+    "resourceIdSize": 15,
+    "resourceIdType": "random",
+    "spaceReplace": "_",
+    "gfyIdSize": 2,
+    "mediaStrict": false,
+    "viewDirect": false,
+    "dataEngine": "@tycrek/papito",
+    "frontendName": "files",
+    "indexFile": "index.js",
+    "useSia": false,
+    "s3enabled": false,
+    "s3endpoint": "sfo3.digitaloceanspaces.com",
+    "s3bucket": "bucket-name",
+    "s3usePathStyle": false,
+    "s3accessKey": "accessKey",
+    "s3secretKey": "secretKey",
+    "__WARNING__": "ibility. For o>",    
+    "diskFilePath": "uploads/",
+    "saveWithDate": true,
+    "saveAsOriginal": false
 }

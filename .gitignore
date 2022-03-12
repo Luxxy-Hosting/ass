@@ -103,13 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-# tokens
-auth.json
-auth.*.json
-
-# data
-data.json
-
 # uploads
 uploads/
 
